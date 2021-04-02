@@ -5,20 +5,22 @@
 void generatedes(int [],int nbdes);
 
 void generatedes(int lesdes[],int nbdes) {
-for(int i=0;i<nbdes;i++)
+for(int i=0;i<nbdes;i++) //pour i allant de 0 aux nombres de dés
 {
-    lesdes[i]=random()%6+1;
+    lesdes[i]=random()%6+1; //j'affecte un nombre entre 1 et 6
 }
 
 }
 
 int main() {
-    srand(time(NULL));
-    int tabdes[6];
-    generatedes(tabdes,5);
-    for(int i;i<5;i++)
+    srand(time(NULL)); //permet de changer de nombre aléatoire
+    int tabdes[6]; //taleau de dés
+    generatedes(tabdes,5); //générations des dés
+
+    /***************affichage des dés********************************/
+    for(int i;i<5;i++) //pour i allant de 0 à 4
     {
-        printf("%d ",tabdes[i]);
+        printf("%d ",tabdes[i]); //affiche le contenu du tableau à l'indice i
     }
 
     return 0;
