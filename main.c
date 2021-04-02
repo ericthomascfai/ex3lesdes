@@ -1,8 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+/*************prototype**********************/
 
-void generatedes(int [],int nbdes);
+
+void generatedes(int [],int);
+
+
+/********implémentation**********************/
+
 
 void generatedes(int lesdes[],int nbdes) {
 for(int i=0;i<nbdes;i++) //pour i allant de 0 aux nombres de dés
@@ -11,7 +17,7 @@ for(int i=0;i<nbdes;i++) //pour i allant de 0 aux nombres de dés
 }
 
 }
-
+/************************programme principal*************************/
 int main() {
     srand(time(NULL)); //permet de changer de nombre aléatoire
     int tabdes[6]; //taleau de dés
